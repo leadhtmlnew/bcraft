@@ -1,0 +1,50 @@
+//main: ../style.less
+
+.nav {
+    display: flex;
+    
+    @media @tablet {
+        width: 100%;
+
+        //border: 1px solid @purple;
+
+        display: none;
+        flex-direction: column;
+
+        background-color: @white;
+
+        position: absolute;
+        top: 90px;
+        left: 0;
+        z-index: 1000;
+
+        &.show {
+            display: flex;
+        }
+    }
+}
+
+.nav__link {
+    margin-right: 55px;
+    
+    font-size: 15px;
+    font-weight: 700;
+    
+    color: #4C2E88;
+    transition: color .1s linear; &:hover {
+        color: #9921E8;
+    }
+
+    @media @tablet {
+        border-bottom: 1px solid @purple;
+
+        width: 100%;
+        margin-right: 0;
+        padding: 20px 30px;
+
+        &:hover {
+            background: linear-gradient(180deg, #5F72BE 0%, #9921E8 100%);
+            color: @white;
+        }
+    }
+}
